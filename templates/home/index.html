@@ -1,0 +1,48 @@
+{% extends 'basicblog.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block homeactive %} active {% endblock homeactive%}
+
+{% block body %}
+
+<section class="cta-section theme-bg-light py-5">
+    <div class="container text-center">
+        <h2 class="heading">DevBlog - A Blog Template Made For Developers</h2>
+        <div class="intro">Welcome to my blog. Subscribe and get my latest blog post in your inbox.</div>
+        <form class="form-inline my-2 my-lg-0 justify-content-center pt-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    <!--//container-->
+</section>
+
+<section class="blog-list px-3 py-5 p-md-5">
+    <div class="container">
+        <div class="item mb-5">
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="title mb-1"><a href="blog-post.html">Why Every Developer Should Have A Blog</a></h3>
+                    <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min
+                            read</span><span class="comment"><a href="#">8 comments</a></span></div>
+                    <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                        eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Donec quam felis, ultricies...</div>
+                    <a class="more-link" href="blog-post.html">Read more &rarr;</a>
+                </div>
+                <!--//media-body-->
+            </div>
+            <!--//media-->
+        </div>
+        <!--//item-->
+
+        <nav class="blog-nav nav nav-justified my-5">
+            <a class="nav-link-next nav-item nav-link rounded" href="/blog">Go To Blog<i
+                    class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+        </nav>
+
+    </div>
+</section>
+
+{% endblock body %}
