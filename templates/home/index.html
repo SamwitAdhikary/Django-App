@@ -1,17 +1,17 @@
 {% extends 'basicblog.html' %}
 
-{% block title %} Home {% endblock title %}
+{% block title %} Home | Coding Arena Bangla {% endblock title %}
 
-{% block homeactive %} active {% endblock homeactive%}
+{% block homeactive %} active {% endblock homeactive %}
 
 {% block body %}
 
 <section class="cta-section theme-bg-light py-5">
     <div class="container text-center">
-        <h2 class="heading">DevBlog - A Blog Template Made For Developers</h2>
+        <h2 class="heading">Coding Arena - A Blog For Coding Lovers</h2>
         <div class="intro">Welcome to my blog. Subscribe and get my latest blog post in your inbox.</div>
-        <form class="form-inline my-2 my-lg-0 justify-content-center pt-3">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form method="get" action="/search" class="form-inline my-2 my-lg-0 justify-content-center pt-3">
+            <input name="query" id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
@@ -22,17 +22,18 @@
     <div class="container">
         {% for posts in allPosts %}
         <div class="item mb-5">
-            
+
             <div class="media">
                 <div class="media-body">
                     <h3 class="title mb-1"><a href="blog/{{posts.slug}}">{{posts.title}}</a></h3>
-                    <div class="meta mb-1"><span class="date">{{posts.timestamp}}</span><span class="comment"><strong>{{posts.author}}</strong></span></div>
+                    <div class="meta mb-1"><span class="date">{{posts.timestamp}}</span><span
+                            class="comment"><strong>{{posts.author}}</strong></span></div>
                     <div class="intro">{{posts.short_desc}}...</div>
                     <a class="more-link" href="blog/{{posts.slug}}">Read more &rarr;</a>
                 </div>
                 <!--//media-body-->
             </div>
-            
+
             <!--//media-->
         </div>
         {% endfor %}
