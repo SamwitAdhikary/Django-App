@@ -89,22 +89,26 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-end">
                 {% if posts.has_previous %}
-              <li class="page-item">
-                <a class="page-link" href="?page{{posts.previous_page_number}}{% if request.GET.query %}&query={{request.GET.query}}{% endif %}" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              {% endif %}
-              <li class="page-item"><a class="page-link" href="#">{{posts.number}}</a></li>
-              {% if posts.has_next %}
-              <li class="page-item">
-                <a class="page-link" href="?page={{posts.next_page_number}}{% if request.GET.query %}&query={{request.GET.query}}{% endif %}" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-              {% endif %}
+                <li class="page-item">
+                    <a class="page-link"
+                        href="?page{{posts.previous_page_number}}{% if request.GET.query %}&query={{request.GET.query}}{% endif %}"
+                        aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                <li class="page-item"><a class="page-link" href="#">{{posts.number}}</a></li>
+                {% if posts.has_next %}
+                <li class="page-item">
+                    <a class="page-link"
+                        href="?page={{posts.next_page_number}}{% if request.GET.query %}&query={{request.GET.query}}{% endif %}"
+                        aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
             </ul>
-          </nav>
+        </nav>
 
         <!-- Pagination End -->
 
